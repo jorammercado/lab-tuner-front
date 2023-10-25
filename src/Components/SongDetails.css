@@ -1,0 +1,30 @@
+
+.top{
+    color:white;
+    text-align: center;
+    
+}
+
+.table{
+    font-size: 23px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    table-layout: auto;
+    display: table;
+    width: 700px;
+    border-spacing: 21px;
+  }
+
+  button{
+    font-family:inherit;
+    background-color: #fff;
+    color: black;
+    text-decoration:none;
+    padding: 0.01em 1.1em 0.01em 1.1em;
+    border-radius: 20px;
+    font-weight:100;
+    font-size: 1em;
+    box-shadow: 0 2px 6px 0   
+  }
