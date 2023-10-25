@@ -15,7 +15,6 @@ export default function NavBar() {
   return (
     <div className="navbar" > 
     
-        {/* <div className="container"> */}
             <nav className="main">
                 <h1>
                 <Link to="/">Home </Link>
@@ -29,7 +28,6 @@ export default function NavBar() {
                 {/* </button> */}
                 </h1>
             </nav>
-        {/* </div> */}
         
         <div className="name">
           <p>Tunner App</p>
