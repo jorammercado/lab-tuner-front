@@ -1,0 +1,19 @@
+
+
+.Songs {
+
+    text-align: center;
+    color: white;
+
+  }
+
+  .table{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    table-layout: fixed;
+    display: table;
+    width: 700px;
+    border-spacing: 21px;
+  }
+  
