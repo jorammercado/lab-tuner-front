@@ -42,7 +42,7 @@ function SongNewForm() {
     //console.log(song)
     fetch(`${API}/songs`, httpOptions)
       .then((res) => {
-        const index = res.url.split("/")[res.url.split("/").length-1]
+        //const index = res.url.split("/")[res.url.split("/").length-1]
         //console.log(index,song.id,res)
         //alert(`${song.name} was added to the database!`)
         navigate(`/songs/${songs[songs.length-1].id}`)
