@@ -22,7 +22,7 @@ function SongDetails() {
 
   const handleDelete = () => {
     const httpOptions = {"method" : "DELETE"}
-    fetch(`${API}/transactions/${index}`, httpOptions)
+    fetch(`${API}/songs/${song.id}`, httpOptions)
       .then((res) => {
         //console.log(res)
         //alert("hey - song was deleted!  Way to GO!");

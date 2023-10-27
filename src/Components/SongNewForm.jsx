@@ -1,11 +1,13 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 //import { Link, useParams, useNavigate } from "react-router-dom";
 import { useNavigate, Link } from "react-router-dom"
 import "./SongNewForm.css"
+import Song from "./Song";
 const API = import.meta.env.VITE_BASE_URL
 
 function SongNewForm() {
   const navigate = useNavigate()
+  const [songs, setSongs] = useState([])
   const [song, setSong] = useState({
     name: "",
     artist: "",
@@ -13,6 +15,13 @@ function SongNewForm() {
     time: "",
     is_favorite: false
   })
+
+  useEffect(()=> {
+    fetch(`${API}/songs`)
+    .then((response) => response.json())
+    .then( songs => setSongs(songs))
+    .catch(error => console.log(error,songs))
+  }, [songs, navigate])
 
   const handleTextChange = (event) => {
     setSong({ ...song, [event.target.id]: event.target.value })
@@ -30,12 +39,13 @@ function SongNewForm() {
         "Content-type" : "application/json"
       }
     }
+    //console.log(song)
     fetch(`${API}/songs`, httpOptions)
       .then((res) => {
         const index = res.url.split("/")[res.url.split("/").length-1]
-        //console.log(index)
+        //console.log(index,song.id,res)
         //alert(`${song.name} was added to the database!`)
-        navigate(`/songs/${index}`)
+        navigate(`/songs/${songs[songs.length-1].id}`)
       })
       .catch((err) => console.error(err))
   }
@@ -48,13 +58,14 @@ function SongNewForm() {
   return (
     <div className="New">
       <form onSubmit={handleSubmit}>
-        <label className="name" htmlFor="name">Song: </label>
+        <label className="nameSong" htmlFor="name">Song: </label>
         <input
           id="name"
           value={song.name}
           type="text"
           onChange={handleTextChange}
           placeholder="song"
+          autoComplete="off"
           required
         />
         <br></br>
@@ -86,7 +97,7 @@ function SongNewForm() {
           placeholder="run time"
         />
         <br></br>
-        <label id="is_favorite" htmlFor="is_favorite">Favorite:</label>
+        <label id="check" htmlFor="is_favorite">Favorite:</label>
         <input
           id="is_favorite"
           type="checkbox"

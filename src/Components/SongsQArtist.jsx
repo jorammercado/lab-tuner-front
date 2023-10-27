@@ -2,18 +2,18 @@ import { useEffect, useState } from "react"
 import { useParams, useNavigate, Link } from "react-router-dom"
 import React from 'react'
 import Song from "./Song";
-import "./Songs.css"
+import "./SongsQArtist.css"
 const API = import.meta.env.VITE_BASE_URL
 
-function Songs() {
+function SongsQArtist() {
   const [songs, setSongs] = useState([]);
   useEffect(()=> {
-    fetch(`${API}/songs`)
+    fetch(`${API}/songs/?order=asc`)
     .then((response) => response.json())
     .then( songs => setSongs(songs))
     .catch(error => console.log(error,songs))
   }, [])
-
+  console.log(songs)
   return (
     <div className="Songs" >
         <table className="table" >
@@ -38,5 +38,5 @@ function Songs() {
   )
 }
 
-export default Songs
+export default SongsQArtist
 

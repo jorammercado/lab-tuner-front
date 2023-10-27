@@ -41,28 +41,29 @@ function SongEditForm() {
       }
     }
 
-      fetch(`${API}/songs/${index}`, httpOptions)
+      fetch(`${API}/songs/${song.id}`, httpOptions)
         .then(() => { 
           alert(`${song.name} has been updated!`);
-          navigate(`/songs/${index}`)
+          navigate(`/songs/${song.id}`)
         })
         .catch((err) => console.error(err))
   }
   const handleSubmit = (event) => {
     event.preventDefault()
-    updateTransaction()
+    updateSong()
   }
   return (
     <div className="Edit">
       
       <form onSubmit={handleSubmit}>
-      <label className="name" htmlFor="name">Song: </label>
+      <label className="nameSong" htmlFor="name">Song: </label>
         <input
           id="name"
           value={song.name}
           type="text"
           onChange={handleTextChange}
           placeholder="song"
+          autoComplete="off"
           required
         />
         <br></br>
@@ -94,7 +95,7 @@ function SongEditForm() {
           placeholder="run time"
         />
         <br></br>
-        <label id="is_favorite" htmlFor="is_favorite">Favorite:</label>
+        <label id="check" htmlFor="is_favorite">Favorite:</label>
         <input
           id="is_favorite"
           type="checkbox"

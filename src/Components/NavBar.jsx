@@ -4,13 +4,13 @@ import "./NavBar.css"
 const API = import.meta.env.VITE_BASE_URL
 
 export default function NavBar() {
-  const [songs, setSongs] = useState([])
-  useEffect(()=> {
-    fetch(`${API}/songs`)
-    .then((response) => response.json())
-    .then( songs => setSongs(songs))
-    .catch(error => console.log(error))
-  }, [])
+  // const [songs, setSongs] = useState([])
+  // useEffect(()=> {
+  //   fetch(`${API}/songs`)
+  //   .then((response) => response.json())
+  //   .then( songs => setSongs(songs))
+  //   .catch(error => console.log(error))
+  // }, [])
 
   return (
     <div className="navbar" > 
