@@ -15,11 +15,13 @@ function Songs() {
     .catch(error => console.log(error))
   }, [])
   const [artistOrder, setArtistOrder] = useState(false)
+  const [albumOrder, setAlbumOrder] = useState(false)
+  const [nameOrder, setNameOrder] = useState(false)
 
-  const changeOrder = () => {
+  const changeOrderN = () => {
     // console.log("test")
-    if(artistOrder===false){
-      setArtistOrder(true)
+    if(nameOrder===false){
+      setNameOrder(true)
     fetch(`${API}/songs/?order=asc`)
     .then((response) => response.json())
     .then( songs => setSongs(songs))
@@ -29,7 +31,7 @@ function Songs() {
     .catch(error => console.log(error))
     }
     else{
-      setArtistOrder(false)
+      setNameOrder(false)
       fetch(`${API}/songs/?order=desc`)
     .then((response) => response.json())
     .then( songs => setSongs(songs))
@@ -38,26 +40,79 @@ function Songs() {
     })
     .catch(error => console.log(error))
     }
-
   }
-  const handleSubmit = (event) => {
+
+  const changeOrderArt = () => {
+    // console.log("test")
+    if(artistOrder===false){
+      setArtistOrder(true)
+    fetch(`${API}/songs/?order=ascArt`)
+    .then((response) => response.json())
+    .then( songs => setSongs(songs))
+    .then((res) => {
+      navigate('/songs/?order=ascArt')
+    })
+    .catch(error => console.log(error))
+    }
+    else{
+      setArtistOrder(false)
+      fetch(`${API}/songs/?order=descArt`)
+    .then((response) => response.json())
+    .then( songs => setSongs(songs))
+    .then((res) => {
+      navigate('/songs/?order=descArt')
+    })
+    .catch(error => console.log(error))
+    }
+  }
+
+  const changeOrderAl = () => {
+    // console.log("test")
+    if(albumOrder===false){
+      setAlbumOrder(true)
+    fetch(`${API}/songs/?order=ascAl`)
+    .then((response) => response.json())
+    .then( songs => setSongs(songs))
+    .then((res) => {
+      navigate('/songs/?order=ascAl')
+    })
+    .catch(error => console.log(error))
+    }
+    else{
+      setAlbumOrder(false)
+      fetch(`${API}/songs/?order=descAl`)
+    .then((response) => response.json())
+    .then( songs => setSongs(songs))
+    .then((res) => {
+      navigate('/songs/?order=descAl')
+    })
+    .catch(error => console.log(error))
+    }
+  }
+
+  const handleSubmitN = (event) => {
     // this prevents the PAGE from RELOADING;
     event.preventDefault()
-    changeOrder()
+    changeOrderN()
   }
-  //console.log(songs)
+  const handleSubmitArt = event => {
+    event.preventDefault()
+    changeOrderArt()
+  }
+  const handleSubmitAl = event => {
+    event.preventDefault()
+    changeOrderAl()
+  }
+
+  
   return (
     <div className="Songs" >
         <table className="table" >
           <tbody >
             <tr >
-              <th >  
-                
-                  <button onClick={handleSubmit}>Artist</button>
-                       
-              </th>
-              <th >Name</th>
-              <th >Album</th>
+              <th > <button onClick={handleSubmitArt}>Artist</button> </th>
+              <th > <button onClick={handleSubmitN}>Name</button> </th>
+              <th > <button onClick={handleSubmitAl}>Album</button> </th>
             </tr>
           </tbody>
           <tbody >
