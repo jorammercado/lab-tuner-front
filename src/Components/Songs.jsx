@@ -107,6 +107,7 @@ function Songs() {
         <table className="table" >
           <tbody >
             <tr >
+              <th > <button onClick={handleSubmitArt}>⭐</button> </th>
               <th > <button onClick={handleSubmitArt}>Artist</button> </th>
               <th > <button onClick={handleSubmitN}>Name</button> </th>
               <th > <button onClick={handleSubmitAl}>Album</button> </th>

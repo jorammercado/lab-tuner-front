@@ -6,6 +6,9 @@ function Song({ song, index }) {
     
     <tr  >
         <td>
+          {song.is_favorite?`⭐`:""}
+        </td>
+        <td>
         {song.artist} 
         </td>
         <td className="link">
