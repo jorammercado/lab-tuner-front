@@ -17,6 +17,7 @@ function Songs() {
   const [artistOrder, setArtistOrder] = useState(false)
   const [albumOrder, setAlbumOrder] = useState(false)
   const [nameOrder, setNameOrder] = useState(false)
+  const [favOrder, setFavOrder] = useState(false)
 
   const changeOrderN = () => {
     if(nameOrder===false){
@@ -87,6 +88,29 @@ function Songs() {
     }
   }
 
+  const changeOrderFav = () => {
+    if(favOrder===false){
+      setFavOrder(true)
+    fetch(`${API}/songs/?is_favorite=true`)
+    .then((response) => response.json())
+    .then( songs => setSongs(songs))
+    .then((res) => {
+      navigate('/songs/?is_favorite=true')
+    })
+    .catch(error => console.log(error))
+    }
+    else{
+      setFavOrder(false)
+      fetch(`${API}/songs`)
+    .then((response) => response.json())
+    .then( songs => setSongs(songs))
+    .then((res) => {
+      navigate('/songs')
+    })
+    .catch(error => console.log(error))
+    }
+  }
+
   const handleSubmitN = (event) => {
     // this prevents the PAGE from RELOADING;
     event.preventDefault()
@@ -101,13 +125,17 @@ function Songs() {
     changeOrderAl()
   }
 
+  const handleSubmitFav = event => {
+    event.preventDefault()
+    changeOrderFav()
+  }
   
   return (
     <div className="Songs" >
         <table className="table" >
           <tbody >
             <tr >
-              <th > <button onClick={handleSubmitArt}>⭐</button> </th>
+              <th > <button onClick={handleSubmitFav}>⭐</button> </th>
               <th > <button onClick={handleSubmitArt}>Artist</button> </th>
               <th > <button onClick={handleSubmitN}>Name</button> </th>
               <th > <button onClick={handleSubmitAl}>Album</button> </th>
