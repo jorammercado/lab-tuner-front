@@ -19,7 +19,6 @@ function Songs() {
   const [nameOrder, setNameOrder] = useState(false)
 
   const changeOrderN = () => {
-    // console.log("test")
     if(nameOrder===false){
       setNameOrder(true)
     fetch(`${API}/songs/?order=asc`)
@@ -43,7 +42,6 @@ function Songs() {
   }
 
   const changeOrderArt = () => {
-    // console.log("test")
     if(artistOrder===false){
       setArtistOrder(true)
     fetch(`${API}/songs/?order=ascArt`)
@@ -67,7 +65,6 @@ function Songs() {
   }
 
   const changeOrderAl = () => {
-    // console.log("test")
     if(albumOrder===false){
       setAlbumOrder(true)
     fetch(`${API}/songs/?order=ascAl`)

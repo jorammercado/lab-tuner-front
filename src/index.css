@@ -70,5 +70,7 @@ button:focus-visible {
 
 body{
   background-image: url("../backGrd.jpeg");
-  background-size:cover;
+  background-size:contain;
+  background-position:top;
+  
 }

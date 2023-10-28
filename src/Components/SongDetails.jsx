@@ -37,6 +37,9 @@ function SongDetails() {
         <table className="table">
             <tbody>
             <tr>
+            <td> <img src={`${song.album_img}`} /> </td>
+            </tr>
+            <tr>
             <td> Song: {song.name}</td>
             </tr>
             <tr>
