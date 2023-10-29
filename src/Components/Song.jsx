@@ -5,8 +5,14 @@ function Song({ song, index }) {
   return (
     
     <tr  >
-        <td>
-          {song.is_favorite?`⭐`:""}
+        <td >
+          <input
+          className="star"
+          id="is_favorite"
+          type="checkbox"
+          checked={song.is_favorite}
+          readOnly
+        />
         </td>
         <td>
         {song.artist} 

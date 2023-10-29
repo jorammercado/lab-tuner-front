@@ -31,4 +31,8 @@
 
   img{
     width:50%;
+    border-radius: 20px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   }
+
+  

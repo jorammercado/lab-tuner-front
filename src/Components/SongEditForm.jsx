@@ -19,7 +19,7 @@ function SongEditForm() {
   }
 
   const handleCheckboxChange = () => {
-    setTransaction({ ...song, is_favorite: !song.is_favorite })
+    setSong({ ...song, is_favorite: !song.is_favorite })
   }
 
   useEffect(() => {
@@ -43,7 +43,7 @@ function SongEditForm() {
 
       fetch(`${API}/songs/${song.id}`, httpOptions)
         .then(() => { 
-          alert(`${song.name} has been updated!`);
+          alert(`${song.name} has been updated!`)
           navigate(`/songs/${song.id}`)
         })
         .catch((err) => console.error(err))

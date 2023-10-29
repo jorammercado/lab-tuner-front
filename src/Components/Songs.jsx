@@ -135,7 +135,7 @@ function Songs() {
         <table className="table" >
           <tbody >
             <tr >
-              <th > <button onClick={handleSubmitFav}>⭐</button> </th>
+              <th > <button className="fav" onClick={handleSubmitFav}> {`\u2605`} </button> </th>
               <th > <button onClick={handleSubmitArt}>Artist</button> </th>
               <th > <button onClick={handleSubmitN}>Name</button> </th>
               <th > <button onClick={handleSubmitAl}>Album</button> </th>
