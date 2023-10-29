@@ -8,7 +8,7 @@ function Song({ song, index }) {
         <td >
           <input
           className="star"
-          id="is_favorite"
+          name="star"
           type="checkbox"
           checked={song.is_favorite}
           readOnly
@@ -21,7 +21,7 @@ function Song({ song, index }) {
             <Link to={`/songs/${index}`}> {song.name} </Link>
       </td>
       <td>
-      {song.album} 
+      {song.time} 
       </td>
       
     </tr>

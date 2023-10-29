@@ -25,7 +25,7 @@ function SongDetails() {
     fetch(`${API}/songs/${song.id}`, httpOptions)
       .then((res) => {
         //console.log(res)
-        //alert("hey - song was deleted!  Way to GO!");
+        alert("hey - song was deleted!  Way to GO!");
         navigate('/songs');
       })
       .catch((err) => console.error(err))

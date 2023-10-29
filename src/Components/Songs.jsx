@@ -138,7 +138,7 @@ function Songs() {
               <th > <button className="fav" onClick={handleSubmitFav}> {`\u2605`} </button> </th>
               <th > <button onClick={handleSubmitArt}>Artist</button> </th>
               <th > <button onClick={handleSubmitN}>Name</button> </th>
-              <th > <button onClick={handleSubmitAl}>Album</button> </th>
+              <th > <button onClick={handleSubmitAl}>Time</button> </th>
             </tr>
           </tbody>
           <tbody >
