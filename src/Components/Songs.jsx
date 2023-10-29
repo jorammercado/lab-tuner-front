@@ -18,6 +18,7 @@ function Songs() {
   const [albumOrder, setAlbumOrder] = useState(false)
   const [nameOrder, setNameOrder] = useState(false)
   const [favOrder, setFavOrder] = useState(false)
+  const [timeOrder, setTimeOrder] = useState(false)
 
   const changeOrderN = () => {
     if(nameOrder===false){
@@ -111,23 +112,51 @@ function Songs() {
     }
   }
 
-  const handleSubmitN = (event) => {
+  const changeOrderTime = () => {
+    if(timeOrder===false){
+      setTimeOrder(true)
+    fetch(`${API}/songs/?order=ascTime`)
+    .then((response) => response.json())
+    .then( songs => setSongs(songs))
+    .then((res) => {
+      navigate('/songs/?order=ascTime')
+    })
+    .catch(error => console.log(error))
+    }
+    else{
+      setTimeOrder(false)
+    fetch(`${API}/songs/?order=descTime`)
+    .then((response) => response.json())
+    .then( songs => setSongs(songs))
+    .then((res) => {
+      navigate('/songs/?order=descTime')
+    })
+    .catch(error => console.log(error))
+    }
+  }
+
+  const handleSortN = (event) => {
     // this prevents the PAGE from RELOADING;
     event.preventDefault()
     changeOrderN()
   }
-  const handleSubmitArt = event => {
+  const handleSortArt = event => {
     event.preventDefault()
     changeOrderArt()
   }
-  const handleSubmitAl = event => {
+  const handleSortAl = event => {
     event.preventDefault()
     changeOrderAl()
   }
 
-  const handleSubmitFav = event => {
+  const handleSortFav = event => {
     event.preventDefault()
     changeOrderFav()
+  }
+
+  const handleSortTime = event => {
+    event.preventDefault()
+    changeOrderTime()
   }
   
   return (
@@ -135,10 +164,10 @@ function Songs() {
         <table className="table" >
           <tbody >
             <tr >
-              <th > <button className="fav" onClick={handleSubmitFav}> {`\u2605`} </button> </th>
-              <th > <button onClick={handleSubmitArt}>Artist</button> </th>
-              <th > <button onClick={handleSubmitN}>Name</button> </th>
-              <th > <button onClick={handleSubmitAl}>Time</button> </th>
+              <th > <button className="fav" onClick={handleSortFav}> {`\u2605`} </button> </th>
+              <th > <button onClick={handleSortArt}>Artist</button> </th>
+              <th > <button onClick={handleSortN}>Name</button> </th>
+              <th > <button onClick={handleSortTime}>Time</button> </th>
             </tr>
           </tbody>
           <tbody >
