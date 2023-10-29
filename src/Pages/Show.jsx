@@ -4,7 +4,7 @@ import "./Show.css"
 function Show(){
     return (
         <div className="Show">
-            <h2> Song Details:</h2>
+            <h1 className="title"> Song Details:</h1>
             <SongDetails />
         </div>
     )
