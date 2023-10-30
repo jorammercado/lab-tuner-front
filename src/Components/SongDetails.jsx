@@ -69,6 +69,9 @@ function SongDetails() {
       <br></br>
       <br></br>
       <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
     </article>
   )
 }

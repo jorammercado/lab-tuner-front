@@ -165,9 +165,9 @@ function Songs() {
           <tbody >
             <tr >
               <th > <button className="fav" onClick={handleSortFav}> {`\u2605`} </button> </th>
-              <th > <button onClick={handleSortArt}>Artist</button> </th>
-              <th > <button onClick={handleSortN}>Name</button> </th>
-              <th > <button onClick={handleSortTime}>Time</button> </th>
+              <th > <button onClick={handleSortArt}>Artist {` \u21f3`}</button> </th>
+              <th > <button onClick={handleSortN}>Name {` \u21f3`}</button> </th>
+              <th > <button onClick={handleSortTime}>Time{`\u21f3`}</button> </th>
             </tr>
           </tbody>
           <tbody >

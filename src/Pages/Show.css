@@ -1,6 +1,6 @@
 
 .Show{
-    color:white;
+    color: rgb(245,245,245);
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -9,6 +9,7 @@
     width: 700px;
 }
 
-.title{
+.titleShow{
     margin-bottom: 1px;
+    font-size: 40px;
 }

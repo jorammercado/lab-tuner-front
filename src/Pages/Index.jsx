@@ -4,7 +4,7 @@ import "./Index.css"
 function Index(){
     return (
         <div className="Index">
-            <h1>Index: </h1>
+            <h1 className="titleIndex">Songs Library </h1>
             <Songs />
         </div>
     )
