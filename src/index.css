@@ -69,8 +69,9 @@ button:focus-visible {
 } */
 
 body{
-  background-image: url("../backGrd.jpeg");
-  background-size:contain;
+  background-image: url("../backGrd2.jpeg");
+  background-size:1200px;
   background-position:top;
+  background-repeat:space;
   
 }
