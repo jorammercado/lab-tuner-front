@@ -136,7 +136,6 @@ function Songs() {
   }
 
   const handleSortN = (event) => {
-    // this prevents the PAGE from RELOADING;
     event.preventDefault()
     changeOrderN()
   }

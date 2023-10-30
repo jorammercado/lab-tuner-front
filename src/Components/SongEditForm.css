@@ -1,6 +1,6 @@
+
 .Edit{
     color:white;
-    
 }
 
 input[type=button], input[type=submit] {
@@ -34,12 +34,6 @@ input[type=button], input[type=submit] {
   input[id=name]{
     margin-left: 20px;
   }
-
-  /* input[id=amount]::-webkit-outer-spin-button,
-  input[id=amount]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  } */
-
 
   input[id=is_favorite]{
     margin-left: 50px;

@@ -26,7 +26,6 @@ function SongEditForm() {
     fetch(`${API}/songs/${index}`)
       .then(response => response.json())
       .then(song => {
-        //console.log(song)
         setSong(song)
     })
     .catch(() => navigate("/not-found"))

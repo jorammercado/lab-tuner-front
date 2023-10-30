@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react"
-//import { Link, useParams, useNavigate } from "react-router-dom";
-import { useNavigate, Link } from "react-router-dom"
+import { useNavigate, Link, useParams } from "react-router-dom"
 import "./SongNewForm.css"
-import Song from "./Song";
 const API = import.meta.env.VITE_BASE_URL
 
 function SongNewForm() {
@@ -39,19 +37,14 @@ function SongNewForm() {
         "Content-type" : "application/json"
       }
     }
-    //console.log(song)
     fetch(`${API}/songs`, httpOptions)
       .then((res) => {
-        //const index = res.url.split("/")[res.url.split("/").length-1]
-        //console.log(index,song.id,res)
-        //alert(`${song.name} was added to the database!`)
         navigate(`/songs/${songs[songs.length-1].id}`)
       })
       .catch((err) => console.error(err))
   }
 
   const handleSubmit = (event) => {
-    // this prevents the PAGE from RELOADING;
     event.preventDefault()
     addSong()
   }

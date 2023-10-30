@@ -1,10 +1,7 @@
 
-
 .Songs {
-
     text-align: center;
     color: white;
-
   }
 
   .table{
@@ -15,7 +12,6 @@
     display: table;
     width: 75%;
     border-spacing: 21px;
-    
   }
   
   .fav{
