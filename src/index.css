@@ -1,8 +1,6 @@
 
 body{
   background-image: url("../backGrd2.jpeg");
-  background-size:1200px;
+  background-size:auto;
   background-position:top;
-  background-repeat:space;
-  
 }
