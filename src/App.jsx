@@ -6,6 +6,7 @@ import FourOFour from "./Pages/FourOFour"
 import Home from "./Pages/Home"
 import Index from "./Pages/Index"
 import IndexArtist from "./Pages/IndexArtist"
+import ShowArtist from "./Pages/ShowArtist"
 import New from "./Pages/New"
 import Show from "./Pages/Show"
 import PlaceHolder from "./Pages/PlaceHolder"
@@ -27,6 +28,7 @@ function App() {
             <Route path="/" element ={<Home />} />
             <Route path="/songs" element={<Index />} />
             <Route path="/artists" element={<IndexArtist />} />
+            <Route path="/artists/:index/songs" element={<ShowArtist />} />
             <Route path="/songs/placeHolder" element={<PlaceHolder />} />
             <Route path="/songs/new" element={<New />} />
             <Route path="/songs/:index" element={<Show />} />
