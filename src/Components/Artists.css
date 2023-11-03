@@ -1,0 +1,30 @@
+
+.Artists {
+    text-align: center;
+    color: white;
+  }
+
+  .artistTable{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    table-layout: auto;
+    display: table;
+    width: 75%;
+    border-spacing: 21px;
+  }
+  
+  .fav{
+    color:gold;
+  }
+
+  table, th,td {
+    border: 1px solid grey;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+                rgba(0, 0, 0, 0.12) 0px -12px 30px,
+                rgba(0, 0, 0, 0.12) 0px 4px 6px,
+                rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+                rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+
+  

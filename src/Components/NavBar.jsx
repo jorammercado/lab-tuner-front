@@ -13,11 +13,14 @@ export default function NavBar() {
           <Link to="/songs">Songs </Link>
         </h1>
         <h1>
+          <Link to="/artists">Artists </Link>
+        </h1>
+        <h1>
           <Link to="/songs/new">New Song</Link>
         </h1>
       </nav>
       <div className="name">
-        <p>Tunner App</p>
+        <h1>Tunner App</h1>
       </div>
     </div>
   )

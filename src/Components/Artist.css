@@ -1,0 +1,14 @@
+
+td{
+    color:rgb(245,245,245);
+}
+
+a{
+    color: rgb(190,190,190);
+    font-size: 22px;
+}
+
+a:hover{
+    color: white;
+}
+
