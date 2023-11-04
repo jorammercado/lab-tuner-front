@@ -73,10 +73,11 @@ function SongEditForm() {
           type="text"
           onChange={handleTextChange}
           placeholder="artist"
+          readOnly
           required
         />
         <br></br>
-        <label className="album" htmlFor="album">Artist:</label>
+        <label className="album" htmlFor="album">Album:</label>
         <input
           id="album"
           value={song.album}

@@ -56,7 +56,7 @@ function SongDetails() {
       </table>
       <div className="showNavigation">
           <Link to={`/songs`}>
-            <button>Back</button>
+            <button>Songs</button>
           </Link>
           <Link to={`/songs/${index}/edit`}>
             <button>Edit</button>

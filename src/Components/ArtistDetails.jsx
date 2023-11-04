@@ -71,7 +71,7 @@ function ArtistDetails() {
             </table>
             <div className="showNavigation">
                 <Link to={`/artists`}>
-                    <button>Back</button>
+                    <button>Artists</button>
                 </Link>
                 <Link to={`/artists/${index}/edit`}>
                     <button>Edit</button>

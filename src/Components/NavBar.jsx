@@ -20,7 +20,7 @@ export default function NavBar() {
         </h1>
       </nav>
       <div className="name">
-        <h1>Tunner App</h1>
+        <h1>Tuner App</h1>
       </div>
     </div>
   )

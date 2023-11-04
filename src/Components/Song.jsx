@@ -14,13 +14,13 @@ function Song({ song, index }) {
         />
       </td>
       <td>
-        {song.artist} 
+        {song.artist}
       </td>
       <td className="link">
-        <Link to={`/songs/${index}`}> {song.name}</Link>
+        <Link to={`/songs/${index}`}> {song.name} </Link>
       </td>
       <td>
-        {song.time} 
+        {song.time}
       </td>
     </tr>
   )
