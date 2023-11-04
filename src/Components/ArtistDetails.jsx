@@ -2,16 +2,22 @@ import { useState, useEffect } from "react"
 import { Link, useParams, useNavigate } from "react-router-dom"
 import React from 'react'
 import "./ArtistDetails.css"
-import Song from "./Song";
+import ArtistSong from "./ArtistSong";
 const API = import.meta.env.VITE_BASE_URL
 
 function ArtistDetails() {
-    const [artistObj, setArtistObj] = useState({
-        allArtistSongs: [],
+    const [artist, setArtist] = useState({
         artist_img: "",
         artist_name: "",
         id: 0
-    })
+    })  
+    const [artistObj, setArtistObj] = useState({
+        artist_img: "",
+        artist_name: "",
+        id: 0,
+        allArtistSongs: []
+    })  
+
     let navigate = useNavigate()
     let { index } = useParams()
 
@@ -23,6 +29,16 @@ function ArtistDetails() {
             })
             .catch(() => navigate("/not-found"))
     }, [index, navigate])
+
+    useEffect(() => {
+        fetch(`${API}/artists/${index}`)
+            .then(response => response.json())
+            .then(artist => {
+                setArtist(artist)
+            })
+            .catch(() => navigate("/not-found"))
+    }, [index, navigate])
+
 
     const handleDelete = () => {
         const httpOptions = { "method": "DELETE" }
@@ -38,23 +54,18 @@ function ArtistDetails() {
         <article className="topArtist">
             <table className="tableArtist">
                 <tbody>
-                    <tr>
-                        <td> <img src={`${artistObj.artist_img}`} /> </td>
+                    <tr className="artistPic">
+                        <th colSpan="4"> <img src={`${artist.artist_img}`} /> </th>
                     </tr>
-                    <tr>
-                        <td>Name: {artistObj.artist_name}</td>
+                    <tr className="artistName">
+                        <th colSpan="4"> Name: {artist.artist_name} </th>
                     </tr>
                 </tbody>
                 <tbody >
-                    {console.log(artistObj)}
-                    {console.log(artistObj.allArtistSongs)}
-                    {console.log( (artistObj.allArtistSongs)[0] )}
-                    { 
-                        (artistObj.allArtistSongs).map((song, index) => {
-                        return <Song key={song.id} song={song} index={song.id} />
-                    })
-               
-                
+                    {   (artistObj.allArtistSongs)!==undefined?
+                        artistObj.allArtistSongs.map((song, index) => {
+                            return <ArtistSong key={song.id} artistSong={song} index={song.id} />
+                        }):<tr><td>no songs from artist</td></tr>
                     }
                 </tbody>
             </table>

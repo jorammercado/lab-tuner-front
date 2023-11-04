@@ -1,0 +1,32 @@
+
+td{
+    color:rgb(245,245,245);
+}
+
+a{
+    color: rgb(190,190,190);
+    font-size: 22px;
+}
+
+a:hover{
+    color: white;
+}
+
+.star {
+    visibility:hidden;
+    font-size:15px;
+    cursor:auto;
+    color:gold;
+}
+.star:before {
+   content: "";
+   position: absolute;
+   visibility:visible;
+   color:white;
+}
+.star:checked:before {
+   content: "\2605";
+   position: absolute;
+   color:gold;
+   font-size:18px;
+}
