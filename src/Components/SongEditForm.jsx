@@ -111,7 +111,7 @@ function SongEditForm() {
         <button>Cancel</button>
       </Link>
       <Link to={`/songs`}>
-        <button>View All</button>
+        <button>Songs</button>
       </Link>
       
     </div>

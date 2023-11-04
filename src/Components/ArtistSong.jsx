@@ -13,9 +13,6 @@ function ArtistSong({ artistSong, index }) {
           readOnly
         />
       </td>
-      <td>
-        {artistSong.artist} 
-      </td>
       <td className="link">
         <Link to={`/songs/${index}`}> {artistSong.name}</Link>
       </td>

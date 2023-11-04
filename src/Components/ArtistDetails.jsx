@@ -10,13 +10,13 @@ function ArtistDetails() {
         artist_img: "",
         artist_name: "",
         id: 0
-    })  
+    })
     const [artistObj, setArtistObj] = useState({
         artist_img: "",
         artist_name: "",
         id: 0,
         allArtistSongs: []
-    })  
+    })
 
     let navigate = useNavigate()
     let { index } = useParams()
@@ -62,19 +62,15 @@ function ArtistDetails() {
                     </tr>
                 </tbody>
                 <tbody >
-                    {   (artistObj.allArtistSongs)!==undefined?
+                    {(artistObj.allArtistSongs) !== undefined ?
                         artistObj.allArtistSongs.map((song, index) => {
                             return <ArtistSong key={song.id} artistSong={song} index={song.id} />
-                        }):<tr><td>no songs from artist</td></tr>
-                    }
+                        }) : <tr><td>no songs from artist</td></tr>}
                 </tbody>
             </table>
             <div className="showNavigation">
                 <Link to={`/artists`}>
                     <button>Artists</button>
-                </Link>
-                <Link to={`/artists/${index}/edit`}>
-                    <button>Edit</button>
                 </Link>
                 <Link to={`/artists`}>
                     <button onClick={handleDelete}>Delete</button>
