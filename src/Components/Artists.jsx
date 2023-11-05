@@ -45,7 +45,7 @@ function Artists() {
   
   return (
     <div className="Artists" >
-        <table className="artistTable" >
+        <table className="artistTable " >
           <tbody >
             <tr >
               <th > <button onClick={handleSortArt}>Artist {` \u21f3`}</button> </th>

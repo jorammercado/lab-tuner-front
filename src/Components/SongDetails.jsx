@@ -55,6 +55,9 @@ function SongDetails() {
         </tbody>
       </table>
       <div className="showNavigation">
+          <Link to={`/artists/${song.artist_id}/songs`}>
+            <button  type="button" className="btn btn-primary"  >Artist</button>
+          </Link>
           <Link to={`/songs`}>
             <button  type="button" className="btn btn-primary"  >Songs</button>
           </Link>
