@@ -1,9 +1,11 @@
 
 .main {
   margin-top: 25px; 
-  
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: right;
 } 
 
 .nav{
   margin-bottom: 110px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }

@@ -1,6 +1,6 @@
 
-.New{
-    color:white;
+.New2{
+    color:rgb(25, 30, 84);
     
 }
 
@@ -11,7 +11,7 @@ input[type=button], input[type=submit] {
     padding: 0.01em 1.1em 0.01em 1.1em;
     border-radius: 20px;
     font-weight:100;
-    font-size: 1.5em;
+    font-size: 1em;
     box-shadow: 0 2px 6px 0;   
     cursor:pointer;
   }
@@ -20,32 +20,12 @@ input[type=button], input[type=submit] {
     cursor: pointer;
   }
 
-  input[id=artist]{
-    margin-left: 50px;
-  }
-
-  input[id=album]{
-    margin-left: 15px;
-  }
-
-  input[id=time]{
-    margin-left: 45px;
-  }
-
-  input[id=name]{
-    margin-left: 20px;
-  }
-
-  input[id=is_favorite]{
-    margin-left: 50px;
-  }
-  label[id=check]{
-    margin-left: 200px;
-  }
+ 
 
 
   label{
     margin-right: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
   }
   input{
     margin-bottom: 15px;

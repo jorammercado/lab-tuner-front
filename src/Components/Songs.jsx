@@ -160,13 +160,13 @@ function Songs() {
   
   return (
     <div className="Songs" >
-        <table className="table" >
+        <table className="table table-striped table-dark table-hover" >
           <tbody >
             <tr >
-              <th > <button className="fav" onClick={handleSortFav}> {`\u2605`} </button> </th>
-              <th > <button onClick={handleSortArt}>Artist {` \u21f3`}</button> </th>
-              <th > <button onClick={handleSortN}>Name {` \u21f3`}</button> </th>
-              <th > <button onClick={handleSortTime}>Time{`\u21f3`}</button> </th>
+              <th > <button type="button" className="btn btn-primary" onClick={handleSortFav}> {`\u2605`} </button> </th>
+              <th > <button type="button" className="btn btn-primary" onClick={handleSortArt}>Artist {` \u21f3`}</button> </th>
+              <th > <button type="button" className="btn btn-primary" onClick={handleSortN}>Name {` \u21f3`}</button> </th>
+              <th > <button type="button" className="btn btn-primary" onClick={handleSortTime}>Time{`\u21f3`}</button> </th>
             </tr>
           </tbody>
           <tbody >

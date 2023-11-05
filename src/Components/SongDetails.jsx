@@ -29,7 +29,7 @@ function SongDetails() {
 
   return (
     <article className="top">
-      <table className="table">
+      <table className="table table-striped table-dark">
         <tbody>
           <tr>
             <td> <img src={`${song.album_img}`} /> </td>
@@ -56,13 +56,13 @@ function SongDetails() {
       </table>
       <div className="showNavigation">
           <Link to={`/songs`}>
-            <button>Songs</button>
+            <button  type="button" className="btn btn-primary"  >Songs</button>
           </Link>
           <Link to={`/songs/${index}/edit`}>
-            <button>Edit</button>
+            <button  type="button" className="btn btn-primary" >Edit</button>
           </Link>
           <Link to={`/songs`}>
-            <button onClick={handleDelete}>Delete</button>
+            <button  type="button" className="btn btn-primary"  onClick={handleDelete}>Delete</button>
           </Link>
       </div>
       <br></br>

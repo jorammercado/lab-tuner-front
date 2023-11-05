@@ -49,8 +49,9 @@ function SongNewForm() {
     addSong()
   }
   return (
-    <div className="New">
+    <div className="New2">
       <form onSubmit={handleSubmit}>
+        <div className="mb-3">
         <label className="nameSong" htmlFor="name">Song: </label>
         <input
           id="name"
@@ -72,7 +73,7 @@ function SongNewForm() {
           required
         />
         <br></br>
-        <label className="album" htmlFor="album">Artist:</label>
+        <label className="album" htmlFor="album">Album:</label>
         <input
           id="album"
           value={song.album}
@@ -99,10 +100,11 @@ function SongNewForm() {
         />
         <br />
         <input type="submit" />
+        </div>
       </form>
       <div>
           <Link to={`/songs`}>
-            <button>Cancel</button>
+            <button type="button" className="btn btn-primary btn-lg"  >Cancel</button>
           </Link>
       </div>
     </div>

@@ -1,5 +1,14 @@
 
-.Home{
-    text-align: center;
-    color: white;
+.fixed-center{
+    text-align:center;
+    color: rgb(25, 30, 84);
+    /* background-color :rgb(25, 30, 84); */
+    /* width: 30%; */
+    /* background: linear-gradient(90deg, #FFC0CB 25%, #00FFFF 50%); */
+}
+
+.Home2{
+    width: 30%;
+     background: linear-gradient(90deg, #FFC0CB 25%, #00FFFF 50%);
+     text-align: center;
 }

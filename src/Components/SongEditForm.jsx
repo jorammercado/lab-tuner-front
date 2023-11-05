@@ -52,7 +52,7 @@ function SongEditForm() {
     updateSong()
   }
   return (
-    <div className="Edit">
+    <div className="Edit2">
       
       <form onSubmit={handleSubmit}>
       <label className="nameSong" htmlFor="name">Song: </label>
@@ -69,7 +69,7 @@ function SongEditForm() {
         <label className="artist" htmlFor="artist">Artist:</label>
         <input
           id="artist"
-          value={song.artist}
+          value={song.artist+` (read only)`}
           type="text"
           onChange={handleTextChange}
           placeholder="artist"
@@ -108,10 +108,10 @@ function SongEditForm() {
 
       <br></br>
       <Link to={`/songs/${index}`}>
-        <button>Cancel</button>
+        <button type="button" className="btn btn-primary btn-lg">Cancel</button>
       </Link>
       <Link to={`/songs`}>
-        <button>Songs</button>
+        <button type="button" className="btn btn-primary btn-lg">Songs</button>
       </Link>
       
     </div>
